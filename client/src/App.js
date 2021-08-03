@@ -55,21 +55,22 @@ function App() {
           <MenuProvider>
             <ProductsProvider>
               <Auth0Wrapper>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <ProtectedRoute
-                  permissions={[ProductPermission.CreateProducts]}
-                  path="/product/add"
-                  component={AddProduct}
-                />
-                <ProtectedRoute
-                  permissions={[ProductPermission.UpdateProducts]}
-                  path="/product/update/:id"
-                  component={UpdateProduct}
-                />
-                <ProtectedRoute path="/profile" component={Profile} />
-                <Route path="*" component={NotFound} />
-              </Switch>
+                <p>Jack was here!</p>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <ProtectedRoute
+                    permissions={[ProductPermission.CreateProducts]}
+                    path="/product/add"
+                    component={AddProduct}
+                  />
+                  <ProtectedRoute
+                    permissions={[ProductPermission.UpdateProducts]}
+                    path="/product/update/:id"
+                    component={UpdateProduct}
+                  />
+                  <ProtectedRoute path="/profile" component={Profile} />
+                  <Route path="*" component={NotFound} />
+                </Switch>
               </Auth0Wrapper>
             </ProductsProvider>
           </MenuProvider>
